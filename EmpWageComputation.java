@@ -1,6 +1,7 @@
 package com.bridgelabz.empwage.linecomparisions;
 import java.util.Random;
 
+
 public class EmpWageComputation {
 	
 	static int wagePerHr = 20;
@@ -16,6 +17,8 @@ public class EmpWageComputation {
 			DailyWage();
 			
 			PartTimeWage();
+			
+			GetWage();
 		}
 
 //Employee Wage
@@ -52,4 +55,25 @@ public class EmpWageComputation {
 		System.out.println("Employee Part Time Wage is = " +partTime);
 		return (partTime);
 		}
+	
+	public static int GetWage() {
+		Random rand = new Random();
+	    int random = 3;
+		int randNum = rand.nextInt(random);
+		
+		switch(randNum) {
+		case 1:
+			System.out.println("Employee Full Time Wage is = " +EmpWageComputation.DailyWage());
+			break;
+			
+		case 2: 
+			System.out.println("Employee Part time wage is = " +EmpWageComputation.PartTimeWage());
+			break;
+			
+		default : 
+			System.out.println("Employee is Absent");
+		}
+		return 0;
+		
+	}
 }
