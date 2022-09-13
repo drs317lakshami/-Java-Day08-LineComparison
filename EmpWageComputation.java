@@ -20,7 +20,7 @@ public class EmpWageComputation {
 			GetEmpWage();
 		}
 
-//Employee Wage
+	//Employee Daily Wage
 
 	public static int DailyWage() {
 		int dailyWage = wagePerHr * fullDayHr;
@@ -28,26 +28,7 @@ public class EmpWageComputation {
 		return (dailyWage);
 		}
 
-
-	public static int CheckEmployee() {
-		Random rand = new Random();
-	    int random = 3;
-		int randNum = rand.nextInt(random);
-		
-		switch(randNum) {
-		case 1:
-			System.out.println("Employee Is Present");
-			break;
-			
-		case 2: 
-			System.out.println("Employee is present Part time");
-			break;
-			
-		default : 
-			System.out.println("Employee is Absent");
-		}
-		return randNum;
-		}
+	//Employee Part time Wage
 
 	public static int PartTimeWage() {
 		int partTime = wagePerHr * partTimeHr;
@@ -55,6 +36,17 @@ public class EmpWageComputation {
 		return (partTime);
 		}
 	
+	//Employee Monthly Wage
+
+	public static int MonthlyWage() {
+		int monthlyDays = 20;
+		int monthlyWage = monthlyDays * EmpWageComputation.DailyWage();
+		System.out.println("Monthly wage of employee is = " +monthlyWage);
+		return (monthlyWage);
+	}
+	
+	//Employee Wage based on Cases
+
 	public static int GetWage() {
 		Random rand = new Random();
 	    int random = 3;
@@ -76,13 +68,8 @@ public class EmpWageComputation {
 		
 	}
 	
-	public static int MonthlyWage() {
-		int monthlyDays = 20;
-		int monthlyWage = monthlyDays * EmpWageComputation.DailyWage();
-		System.out.println("Monthly wage of employee is = " +monthlyWage);
-		return (monthlyWage);
-	}
-	
+	//Employee Wage based on conditions.
+
 	public static int GetEmpWage() {
 		
         int dailyWage = 1;
