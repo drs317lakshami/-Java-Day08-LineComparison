@@ -1,7 +1,5 @@
 package com.bridgelabz.empwage.linecomparisions;
 import java.util.Random;
-
-
 public class EmpWageComputation {
 	
 	static int wagePerHr = 20;
@@ -14,11 +12,9 @@ public class EmpWageComputation {
 			
 			CheckEmployee();
 			
-			DailyWage();
-			
-			PartTimeWage();
-			
 			GetWage();
+			
+			MonthlyWage();
 		}
 
 //Employee Wage
@@ -75,5 +71,12 @@ public class EmpWageComputation {
 		}
 		return 0;
 		
+	}
+	
+	public static int MonthlyWage() {
+		int monthlyDays = 20;
+		int monthlyWage = monthlyDays * EmpWageComputation.DailyWage();
+		System.out.println("Monthly wage of employee is = " +monthlyWage);
+		return (monthlyWage);
 	}
 }
